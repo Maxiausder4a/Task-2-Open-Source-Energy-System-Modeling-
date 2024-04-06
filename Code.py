@@ -6,12 +6,12 @@ Ertrag = np.array([2,0,3,7, 3, 8, 4, 6, 5,0,1,2])
 Ertrag_ges = np.sum(Ertrag)
 
 #Strom Verbrauch des Verbrauchers in kWh, 12 Werte fuer 12 Stunden 
-# Erstellen von 3 Segmenten mit zufälligen Werten in den angegebenen Bereichen, mit morgens niedrigem, mittags und Abends etwas höherem Verbrauch 
+#Erstellen von 3 Segmenten mit zufï¿½lligen Werten in den angegebenen Bereichen, mit morgens niedrigem, mittags und Abends etwas hï¿½herem Verbrauch 
 segment1 = np.random.randint(0, 7, size=3)  # 3 Werte zwischen 0 und 6
 segment2 = np.random.randint(2, 16, size=6) # 6 Werte zwischen 2 und 15
 segment3 = np.random.randint(0, 11, size=3) # 3 Werte zwischen 4 und 15
 
-# Kombinieren der zufälligen Segmente zu einer einzigen einzeiligen Matrix
+# Kombinieren der zufï¿½lligen Segmente zu einer einzigen einzeiligen Matrix
 Stromverbrauch = np.concatenate([segment1, segment2, segment3])
 Stromverbrauch_ges = np.sum(Stromverbrauch)
 
@@ -22,7 +22,7 @@ Eigenverbrauch_ges = np.sum(Eigenverbrauch)
 #Autarkiegrad berechnen
 Autarkie = Eigenverbrauch_ges / Stromverbrauch_ges
 
-# Erstellen eines Arrays mit den Positionen der Werte für die X-Achse
+# Erstellen eines Arrays mit den Positionen der Werte fï¿½r die X-Achse
 x_positionen = np.arange(len(Ertrag))
 
 # Plotten der Matrizen
@@ -30,8 +30,7 @@ plt.plot(x_positionen, Ertrag, label='Ertrag', marker='o')
 plt.plot(x_positionen, Stromverbrauch, label='Stromverbrauch', marker='x')
 plt.plot(x_positionen, Eigenverbrauch, label='Eigenverbrauch', marker='^')
 
-
-# Hinzufügen von Titel und Legende
+# Hinzufï¿½gen von Titel und Legende
 plt.legend()
 
 # Anzeigen des Plots und des Autrakiegrads
