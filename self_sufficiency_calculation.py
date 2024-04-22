@@ -21,7 +21,7 @@ Eigenverbrauch = np.minimum(Ertrag, Stromverbrauch)
 Eigenverbrauch_ges = np.sum(Eigenverbrauch)
 
 # Autarkiegrad berechnen
-Autarkie = Eigenverbrauch_ges / Stromverbrauch_ges
+Autarkie = Eigenverbrauch_ges * Stromverbrauch_ges
 
 # Erstellen eines Arrays mit den Positionen der Werte f�r die X-Achse
 x_positionen = np.arange(len(Ertrag))
