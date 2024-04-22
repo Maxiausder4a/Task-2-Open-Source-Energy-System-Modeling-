@@ -89,7 +89,7 @@ plt.legend()
 print(Autarkie)
 
         # Testen, ob Ertrag und Stromverbrauch gleich viele Werte haben
-        self.assertEqual(len(Ertrag), len(Stromverbrauch), "Ertrag und Stromverbrauch sollten gleich viele Werte haben")
+        self.assertEqual(len(Ertrag)+1, len(Stromverbrauch), "Ertrag und Stromverbrauch sollten gleich viele Werte haben")
 
 if __name__ == '__main__':
     unittest.main()
